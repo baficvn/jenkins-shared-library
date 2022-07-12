@@ -5,7 +5,7 @@ class Docker implements Serializable{
     Docker(script){
         this.script = script
     }
-    def BuildDockerImage(imageName){ // imageName is akakum/java-maven-app:lst
+    def BuildDockerImage(string imageName){ // imageName is akakum/java-maven-app:lst
         script.echo "building the docker image..."
         script.sh "docker build -t  $imageName . "
         script.sh 'docker image ls'
