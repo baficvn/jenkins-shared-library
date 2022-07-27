@@ -4,6 +4,7 @@ def call(){
     withCredentials([usernamePassword(credentialsId: 'docker-hub', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]) 
     {
         sh "echo $PASSWORD | docker login -u $USERNAME --password-stdin"
-        sh 'docker push akakum/java-maven-app:lst'
+        //sh 'docker push akakum/java-maven-app:lst'
+        sh 'docker image ls'
     }
 }
