@@ -5,4 +5,5 @@ def call(BUILD_NUMBER){
                     sh(command)
                     //def matcher = readFile('pom.xml') =~ '<version>(.+)<version>'
                     //echo "$IMAGE_NAME"
+                    return "${BUILD_NUMBER}"
 }
